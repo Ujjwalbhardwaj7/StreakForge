@@ -108,7 +108,7 @@ export function Celebration({
       <Confetti />
 
       {/* Ambient ember glow behind the payoff */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-80 bg-[radial-gradient(60%_60%_at_50%_0%,oklch(0.60_0.28_300/25%),transparent)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-80 bg-[radial-gradient(60%_60%_at_50%_0%,oklch(0.76_0.15_290/20%),transparent)]" />
 
       {/* Headline */}
       <motion.div
@@ -140,7 +140,7 @@ export function Celebration({
         transition={{ delay: 0.35, duration: 0.5, ease }}
         className="relative mt-8 overflow-hidden rounded-3xl border border-ember/30 bg-gradient-to-br from-ember/15 via-card to-violet/10 p-6 text-center glow-ember"
       >
-        <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[radial-gradient(closest-side,oklch(0.60_0.28_300/35%),transparent)] blur-md" />
+        <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[radial-gradient(closest-side,oklch(0.76_0.15_290/30%),transparent)] blur-md" />
         <div className="text-xs font-semibold uppercase tracking-wide text-ember">Total XP</div>
         <div className="mt-1 font-display text-5xl font-extrabold tracking-tight text-gradient-ember">
           <CountUp from={xpFrom} to={xpTo} delay={0.4} />
@@ -175,9 +175,9 @@ export function Celebration({
                   ? {
                       scale: [1, 1.35, 1],
                       textShadow: [
-                        '0 0 0px oklch(0.60 0.28 300 / 0)',
-                        '0 0 22px oklch(0.60 0.28 300 / 70%)',
-                        '0 0 10px oklch(0.60 0.28 300 / 30%)',
+                        '0 0 0px oklch(0.76 0.15 290 / 0)',
+                        '0 0 22px oklch(0.76 0.15 290 / 60%)',
+                        '0 0 10px oklch(0.76 0.15 290 / 30%)',
                       ],
                     }
                   : {}
@@ -266,7 +266,7 @@ export function Celebration({
               {/* Icon flies in + scales up with a spinning glow ring */}
               <div className="relative mx-auto mt-5 h-28 w-28">
                 <motion.div
-                  className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,oklch(0.60_0.28_300),oklch(0.72_0.17_150),oklch(0.99_0_0),oklch(0.60_0.28_300))] blur-md"
+                  className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,oklch(0.76_0.15_290),oklch(0.80_0.12_155),oklch(0.85_0.12_90),oklch(0.76_0.15_290))] blur-md"
                   animate={{ rotate: 360 }}
                   transition={{ repeat: Infinity, duration: 6, ease: 'linear' }}
                 />

@@ -48,7 +48,7 @@ export function StreakCard() {
   return (
     <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-ember/20 via-card to-violet/10 p-6">
       {/* ambient flame glow */}
-      <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[radial-gradient(closest-side,oklch(0.60_0.28_300/45%),transparent)] blur-xl [animation:flamePulse_3.5s_ease-in-out_infinite]" />
+      <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[radial-gradient(closest-side,oklch(0.76_0.15_290/40%),transparent)] blur-xl [animation:flamePulse_3.5s_ease-in-out_infinite]" />
 
       <div className="relative flex items-start justify-between">
         <span className="text-xs font-semibold uppercase tracking-wide text-ember">
@@ -61,7 +61,7 @@ export function StreakCard() {
       </div>
 
       <div className="relative mt-2 flex items-end gap-3">
-        <Flame className="mb-2 h-12 w-12 fill-ember text-ember drop-shadow-[0_0_12px_oklch(0.60_0.28_300/60%)]" />
+        <Flame className="mb-2 h-12 w-12 fill-ember text-ember drop-shadow-[0_0_12px_oklch(0.76_0.15_290/50%)]" />
         <span className="font-display text-7xl font-extrabold leading-none text-foreground">
           {student.streak}
         </span>

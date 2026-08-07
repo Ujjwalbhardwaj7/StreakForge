@@ -16,10 +16,10 @@ type Particle = {
 }
 
 const COLORS = [
-  'oklch(0.60 0.28 300)', // electric purple
-  'oklch(0.72 0.17 150)', // subtle green
-  'oklch(0.99 0 0)',      // pure white
-  'oklch(0.78 0.20 310)', // light electric magenta/purple
+  'oklch(0.76 0.15 290)', // pastel lavender
+  'oklch(0.80 0.12 155)', // pastel mint
+  'oklch(0.85 0.12 90)',  // pastel butter yellow
+  'oklch(0.78 0.13 30)',  // pastel coral
 ]
 
 /**

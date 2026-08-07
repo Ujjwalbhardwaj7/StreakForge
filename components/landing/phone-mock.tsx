@@ -14,7 +14,7 @@ export function PhoneMock() {
   return (
     <div className="relative mx-auto w-full max-w-[300px]">
       {/* ambient glow */}
-      <div className="absolute -inset-8 -z-10 rounded-[3rem] bg-[radial-gradient(closest-side,oklch(0.60_0.28_300/30%),transparent)] blur-2xl" />
+      <div className="absolute -inset-8 -z-10 rounded-[3rem] bg-[radial-gradient(closest-side,oklch(0.76_0.15_290/25%),transparent)] blur-2xl" />
 
       <div className="rounded-[2.5rem] border border-border bg-card p-2.5 shadow-2xl">
         <div className="overflow-hidden rounded-[2rem] border border-border bg-background">

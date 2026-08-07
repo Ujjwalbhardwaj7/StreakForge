@@ -44,38 +44,38 @@
 :root {
   color-scheme: dark;
 
-  --background: oklch(0.08 0.005 285);
-  --foreground: oklch(0.99 0 0);
+  --background: oklch(0.12 0.015 270);
+  --foreground: oklch(0.97 0.005 270);
 
-  --card: oklch(0.12 0.01 285);
-  --card-foreground: oklch(0.99 0 0);
+  --card: oklch(0.16 0.02 270);
+  --card-foreground: oklch(0.97 0.005 270);
 
-  --popover: oklch(0.12 0.01 285);
-  --popover-foreground: oklch(0.99 0 0);
+  --popover: oklch(0.16 0.02 270);
+  --popover-foreground: oklch(0.97 0.005 270);
 
-  --primary: oklch(0.60 0.28 300);
-  --primary-foreground: oklch(0.99 0 0);
+  --primary: oklch(0.76 0.15 290);
+  --primary-foreground: oklch(0.12 0.02 270);
 
-  --secondary: oklch(0.18 0.015 285);
-  --secondary-foreground: oklch(0.95 0 0);
+  --secondary: oklch(0.20 0.02 270);
+  --secondary-foreground: oklch(0.95 0.005 270);
 
-  --muted: oklch(0.18 0.015 285);
-  --muted-foreground: oklch(0.65 0.01 285);
+  --muted: oklch(0.20 0.02 270);
+  --muted-foreground: oklch(0.68 0.02 270);
 
-  --accent: oklch(0.72 0.17 150);
-  --accent-foreground: oklch(0.99 0 0);
+  --accent: oklch(0.80 0.12 155);
+  --accent-foreground: oklch(0.12 0.02 270);
 
-  --destructive: oklch(0.62 0.22 25);
+  --destructive: oklch(0.70 0.18 25);
 
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.60 0.28 300);
+  --border: oklch(1 0 0 / 9%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.76 0.15 290);
 
-  --ember: oklch(0.60 0.28 300);
-  --ember-foreground: oklch(0.99 0 0);
-  --violet: oklch(0.72 0.17 150);
-  --subtle-green: oklch(0.72 0.17 150);
-  --glass: oklch(0.14 0.015 285 / 65%);
+  --ember: oklch(0.76 0.15 290);
+  --ember-foreground: oklch(0.12 0.02 270);
+  --violet: oklch(0.80 0.12 155);
+  --subtle-green: oklch(0.80 0.12 155);
+  --glass: oklch(0.16 0.02 270 / 65%);
 
   --radius: 1.25rem;
 }
@@ -99,9 +99,9 @@
   .text-gradient-ember {
     background: linear-gradient(
       100deg,
-      oklch(0.99 0 0) 0%,
-      oklch(0.60 0.28 300) 55%,
-      oklch(0.72 0.17 150) 100%
+      oklch(0.98 0 0) 0%,
+      oklch(0.82 0.14 290) 45%,
+      oklch(0.82 0.12 155) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -117,8 +117,8 @@
     background-size: 44px 44px;
   }
   .glow-ember {
-    box-shadow: 0 0 0 1px oklch(0.60 0.28 300 / 40%),
-      0 8px 40px -8px oklch(0.60 0.28 300 / 60%);
+    box-shadow: 0 0 0 1px oklch(0.76 0.15 290 / 30%),
+      0 8px 36px -6px oklch(0.76 0.15 290 / 45%);
   }
 }
 

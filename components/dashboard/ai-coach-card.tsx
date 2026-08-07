@@ -59,11 +59,11 @@ export function AICoachCard({
     >
       {/* Animated gradient border: a slowly rotating conic sweep behind a 1px inset. */}
       {reduceMotion ? (
-        <div className="absolute inset-0 rounded-3xl bg-[conic-gradient(from_0deg,oklch(0.60_0.28_300/60%),oklch(0.72_0.17_150/50%),transparent_55%,oklch(0.60_0.28_300/60%))]" />
+        <div className="absolute inset-0 rounded-3xl bg-[conic-gradient(from_0deg,oklch(0.76_0.15_290/60%),oklch(0.80_0.12_155/50%),transparent_55%,oklch(0.76_0.15_290/60%))]" />
       ) : (
         <motion.div
           aria-hidden
-          className="absolute -inset-[60%] rounded-full bg-[conic-gradient(from_0deg,oklch(0.60_0.28_300/70%),oklch(0.72_0.17_150/60%),transparent_40%,oklch(0.60_0.28_300/70%))]"
+          className="absolute -inset-[60%] rounded-full bg-[conic-gradient(from_0deg,oklch(0.76_0.15_290/70%),oklch(0.80_0.12_155/60%),transparent_40%,oklch(0.76_0.15_290/70%))]"
           animate={{ rotate: 360 }}
           transition={{ duration: 7, ease: 'linear', repeat: Infinity }}
         />
@@ -127,7 +127,7 @@ function CoachOrb({ speaking }: { speaking: boolean }) {
       {/* ambient halo */}
       <motion.div
         aria-hidden
-        className="absolute -inset-1 rounded-full bg-[radial-gradient(circle,oklch(0.60_0.28_300/55%),transparent_70%)] blur-[6px]"
+        className="absolute -inset-1 rounded-full bg-[radial-gradient(circle,oklch(0.76_0.15_290/55%),transparent_70%)] blur-[6px]"
         animate={
           speaking
             ? { scale: [1, 1.22, 1], opacity: [0.6, 0.95, 0.6] }

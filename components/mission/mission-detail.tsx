@@ -104,7 +104,7 @@ export function MissionDetail() {
           </div>
 
           <div className="relative flex flex-1 items-center gap-2.5 overflow-hidden rounded-2xl border border-ember/30 bg-gradient-to-br from-ember/20 via-card to-violet/10 px-4 py-3 glow-ember">
-            <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[radial-gradient(closest-side,oklch(0.60_0.28_300/40%),transparent)] blur-md" />
+            <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[radial-gradient(closest-side,oklch(0.76_0.15_290/35%),transparent)] blur-md" />
             <Zap className="h-5 w-5 text-ember" fill="currentColor" />
             <div className="relative">
               <div className="text-lg font-extrabold leading-none text-gradient-ember">
