@@ -9,35 +9,35 @@ const props = [
     title: 'Consistency',
     body: 'Show up daily without relying on willpower. Streaks turn good intentions into an automatic habit.',
     accent: 'text-ember',
-    ring: 'from-ember/20 to-violet/10',
+    ring: 'from-ember/20 to-card',
   },
   {
     icon: FolderGit2,
     title: 'Portfolio',
     body: 'Every mission ships real, reviewable work. In 60 days you have projects that speak louder than a résumé.',
-    accent: 'text-violet',
-    ring: 'from-violet/20 to-ember/10',
+    accent: 'text-primary',
+    ring: 'from-primary/20 to-ember/10',
   },
   {
     icon: Sparkles,
     title: 'Confidence',
     body: 'Publishing your wins in public builds proof — and proof builds the belief that you actually can do this.',
     accent: 'text-ember',
-    ring: 'from-ember/20 to-violet/10',
+    ring: 'from-ember/20 to-card',
   },
   {
     icon: Briefcase,
     title: 'Job-readiness',
     body: 'A visible track record, a growing network, and daily reps on real problems — exactly what recruiters look for.',
-    accent: 'text-violet',
-    ring: 'from-violet/20 to-ember/10',
+    accent: 'text-primary',
+    ring: 'from-primary/20 to-ember/10',
   },
 ]
 
 export function Why() {
   return (
-    <section id="why" className="scroll-mt-24 px-4 py-20 sm:py-28">
-      <div className="mx-auto max-w-5xl">
+    <section id="why" className="scroll-mt-24 px-4 py-8">
+      <div className="mx-auto max-w-md">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,16 +46,15 @@ export function Why() {
           className="mx-auto max-w-xl text-center"
         >
           <p className="text-sm font-semibold text-ember">Why StreakForge</p>
-          <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground text-balance sm:text-4xl">
+          <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-foreground text-balance sm:text-3xl">
             The habit that quietly builds a career
           </h2>
-          <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
-            Four things every developer needs to get hired — and StreakForge
-            compounds all four, one day at a time.
+          <p className="mt-2.5 text-xs text-pretty leading-relaxed text-muted-foreground">
+            Four things every developer needs to get hired — compounded one day at a time.
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 gap-3.5">
           {props.map((p, i) => (
             <motion.div
               key={p.title}

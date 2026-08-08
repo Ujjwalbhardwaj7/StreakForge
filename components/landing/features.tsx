@@ -34,7 +34,7 @@ export function Features() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: '-60px' }}
-            className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-ember/15 via-card to-violet/10 p-6 md:col-span-4 md:row-span-2"
+            className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-ember/15 via-card to-card p-6 md:col-span-4 md:row-span-2"
           >
             <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-ember/20 text-ember">
               <Flame className="h-5 w-5 fill-ember" />

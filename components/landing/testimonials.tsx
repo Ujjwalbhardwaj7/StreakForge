@@ -11,7 +11,7 @@ const reviews = [
     role: 'Career switcher → Frontend Engineer',
     streak: 58,
     initials: 'MR',
-    grad: 'from-ember to-violet',
+    grad: 'from-primary to-accent',
   },
   {
     quote:
@@ -20,7 +20,7 @@ const reviews = [
     role: 'Junior Frontend Dev',
     streak: 41,
     initials: 'DP',
-    grad: 'from-violet to-ember',
+    grad: 'from-accent to-primary',
   },
   {
     quote:
@@ -29,7 +29,7 @@ const reviews = [
     role: 'CS Student',
     streak: 33,
     initials: 'SL',
-    grad: 'from-ember to-destructive',
+    grad: 'from-primary to-ember',
   },
   {
     quote:
@@ -38,22 +38,22 @@ const reviews = [
     role: 'Bootcamp Grad → Full-stack Dev',
     streak: 60,
     initials: 'JK',
-    grad: 'from-violet to-primary',
+    grad: 'from-primary to-accent',
   },
 ]
 
 export function Testimonials() {
   return (
-    <section id="reviews" className="scroll-mt-24 px-4 py-20 sm:py-28">
-      <div className="mx-auto max-w-5xl">
+    <section id="reviews" className="scroll-mt-24 px-4 py-8">
+      <div className="mx-auto max-w-md">
         <div className="mx-auto max-w-xl text-center">
           <p className="text-sm font-semibold text-ember">Student success stories</p>
-          <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground text-balance sm:text-4xl">
-            Streaks that changed the trajectory
+          <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-foreground text-balance sm:text-3xl">
+            Builders who completed all 60 days
           </h2>
         </div>
 
-        <div className="mt-12 columns-1 gap-4 sm:columns-2">
+        <div className="mt-6 grid grid-cols-1 gap-3.5">
           {reviews.map((r, i) => (
             <motion.figure
               key={r.name}

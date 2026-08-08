@@ -32,8 +32,8 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how" className="scroll-mt-24 px-4 py-20 sm:py-28">
-      <div className="mx-auto max-w-5xl">
+    <section id="how" className="scroll-mt-24 px-4 py-8">
+      <div className="mx-auto max-w-md">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,15 +42,15 @@ export function HowItWorks() {
           className="mx-auto max-w-xl text-center"
         >
           <p className="text-sm font-semibold text-ember">How it works</p>
-          <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground text-balance sm:text-4xl">
+          <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-foreground text-balance sm:text-3xl">
             Four steps a day keep the streak alive
           </h2>
-          <p className="mt-3 text-pretty text-muted-foreground">
+          <p className="mt-2 text-xs text-pretty text-muted-foreground">
             The whole ritual takes minutes — the compounding takes 60 days.
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 gap-3.5">
           {steps.map((s, i) => (
             <motion.div
               key={s.title}
@@ -58,9 +58,9 @@ export function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.55, delay: i * 0.1 }}
-              className="relative rounded-3xl border border-border bg-card p-6"
+              className="relative rounded-3xl border border-border bg-card p-5"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-ember/20 to-violet/15 text-ember">
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-ember/20 to-card text-ember">
                 <s.icon className="h-5 w-5" />
               </div>
               <p className="mt-5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">

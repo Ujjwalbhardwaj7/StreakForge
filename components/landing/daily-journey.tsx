@@ -36,8 +36,8 @@ const beats = [
 
 export function DailyJourney() {
   return (
-    <section id="journey" className="scroll-mt-24 px-4 py-20 sm:py-28">
-      <div className="mx-auto max-w-3xl">
+    <section id="journey" className="scroll-mt-24 px-4 py-8">
+      <div className="mx-auto max-w-md">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,19 +45,17 @@ export function DailyJourney() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <p className="text-sm font-semibold text-ember">A day in the forge</p>
-          <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground text-balance sm:text-4xl">
-            What a single day looks like
+          <p className="text-sm font-semibold text-ember">The Daily Ritual</p>
+          <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-foreground text-balance sm:text-3xl">
+            What 30 minutes looks like
           </h2>
-          <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
-            Under an hour, start to finish. Repeat 60 times and everything
-            changes.
+          <p className="mt-2 text-xs text-pretty text-muted-foreground">
+            No endless tutorials. Just a clean loop designed to fit into your morning or late night.
           </p>
         </motion.div>
 
-        <div className="relative mt-14 pl-2">
-          {/* vertical spine */}
-          <div className="absolute left-[27px] top-2 bottom-2 w-px bg-gradient-to-b from-ember via-violet to-transparent sm:left-[31px]" />
+        <div className="relative mt-8 space-y-4">
+          <div className="absolute left-[27px] top-2 bottom-2 w-px bg-gradient-to-b from-ember via-primary to-transparent sm:left-[31px]" />
 
           <div className="space-y-6">
             {beats.map((b, i) => (

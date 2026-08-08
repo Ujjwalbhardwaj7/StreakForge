@@ -55,7 +55,7 @@ export function Nav() {
             Log in
           </a>
           <a
-            href="/welcome"
+            href="/dashboard"
             className="rounded-full bg-foreground px-4 py-2 text-sm font-semibold text-background transition-transform active:scale-95"
           >
             Start free

@@ -21,38 +21,26 @@ const item = {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden px-4 pb-16 pt-28 sm:pt-36">
+    <section className="relative overflow-hidden px-4 pb-10 pt-6">
       {/* backdrop */}
       <div className="bg-grid pointer-events-none absolute inset-0 -z-20 [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" />
-      <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[420px] w-[620px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,oklch(0.62_0.2_292/22%),transparent)] blur-3xl" />
+      <div className="pointer-events-none absolute -top-20 left-1/2 -z-10 h-64 w-80 -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(74,104,69,0.2),transparent)] blur-2xl" />
 
-      <div className="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-2">
+      <div className="mx-auto flex flex-col items-center text-center">
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="text-center lg:text-left"
+          className="flex flex-col items-center text-center"
         >
           {/* Featured Premium 3D Glass Logo Reveal */}
-          <motion.div variants={item} className="mb-6 flex flex-col items-center lg:items-start">
-            <LogoReveal size={140} showReplayButton />
+          <motion.div variants={item} className="mb-4 flex flex-col items-center">
+            <LogoReveal size={120} />
           </motion.div>
-
-          <motion.a
-            variants={item}
-            href="#"
-            className="inline-flex items-center gap-2 rounded-full glass border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground"
-          >
-            <span className="flex items-center gap-1 font-semibold text-ember">
-              <Flame className="h-3.5 w-3.5 fill-ember" /> New
-            </span>
-            Cohort 07 starts Monday
-            <ArrowRight className="h-3 w-3" />
-          </motion.a>
 
           <motion.h1
             variants={item}
-            className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground text-balance sm:text-6xl"
+            className="mt-2 font-display text-3xl font-extrabold leading-tight tracking-tight text-foreground text-balance sm:text-5xl"
           >
             Build every day. Grow every day.{' '}
             <span className="text-gradient-ember">Get hired faster.</span>
@@ -72,8 +60,8 @@ export function Hero() {
             className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:justify-start"
           >
             <a
-              href="/welcome"
-              className="group flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-ember to-violet px-6 py-3.5 text-sm font-semibold text-primary-foreground glow-ember transition-transform active:scale-95 sm:w-auto"
+              href="/dashboard"
+              className="group flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-6 py-3.5 text-sm font-semibold text-primary-foreground glow-ember transition-transform active:scale-95 sm:w-auto"
             >
               Start your 60-day journey
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

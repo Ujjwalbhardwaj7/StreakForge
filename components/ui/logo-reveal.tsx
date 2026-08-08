@@ -148,28 +148,27 @@ export function LogoReveal({
 export function PageLoadLogoReveal() {
   const [visible, setVisible] = useState(true)
   const [fading, setFading] = useState(false)
-  const router = useRouter()
   const pathname = usePathname()
 
   useEffect(() => {
+    setVisible(true)
+    setFading(false)
+
     // 1.8s: Start smooth fade & blur out
     const fadeTimer = setTimeout(() => {
       setFading(true)
     }, 1800)
 
-    // 2.2s: Hide splash overlay and unveil mobile view app
+    // 2.2s: Hide splash overlay and unveil page content
     const completeTimer = setTimeout(() => {
       setVisible(false)
-      if (pathname === '/') {
-        router.push('/dashboard')
-      }
     }, 2200)
 
     return () => {
       clearTimeout(fadeTimer)
       clearTimeout(completeTimer)
     }
-  }, [pathname, router])
+  }, [pathname])
 
   if (!visible) return null
 

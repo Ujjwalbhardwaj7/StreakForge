@@ -35,8 +35,8 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="scroll-mt-24 px-4 py-20 sm:py-28">
-      <div className="mx-auto max-w-3xl">
+    <section id="faq" className="scroll-mt-24 px-4 py-8">
+      <div className="mx-auto max-w-md">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
