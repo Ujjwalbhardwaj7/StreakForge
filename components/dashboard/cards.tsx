@@ -26,7 +26,11 @@ import { BadgeModal } from './badge-modal'
 import { StreakGraphModal } from './streak-graph-modal'
 
 /* 1. Welcome header */
-export function WelcomeHeader() {
+export function WelcomeHeader({
+  onTabChange,
+}: {
+  onTabChange?: (tab: 'home' | 'missions' | 'leaderboard' | 'profile') => void
+}) {
   const date = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
     month: 'long',
@@ -40,9 +44,14 @@ export function WelcomeHeader() {
         </h1>
         <p className="mt-0.5 text-sm text-muted-foreground">{date}</p>
       </div>
-      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-ember to-violet text-xs font-bold text-primary-foreground shadow-sm">
+      <button
+        onClick={() => onTabChange?.('profile')}
+        title="View Profile"
+        aria-label="View Profile"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-xs font-bold text-primary-foreground shadow-sm transition-transform hover:scale-105 active:scale-95 cursor-pointer ring-2 ring-border/40 hover:ring-primary/60"
+      >
         {student.avatarInitials}
-      </div>
+      </button>
     </header>
   )
 }

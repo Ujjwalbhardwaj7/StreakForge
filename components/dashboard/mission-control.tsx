@@ -73,7 +73,7 @@ export function MissionControl() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <WelcomeHeader />
+                  <WelcomeHeader onTabChange={handleTabChange} />
                 </motion.div>
 
                 {homeCards.map(({ component: Card, id }, i) => (
