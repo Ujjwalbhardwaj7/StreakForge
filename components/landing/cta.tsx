@@ -47,6 +47,8 @@ export function CTA() {
   )
 }
 
+import { BrandWatermarkReveal } from '@/components/ui/brand-watermark-reveal'
+
 export function Footer() {
   const cols = [
     { title: 'Product', links: ['Missions', 'Streaks', 'Leaderboards', 'Pricing'] },
@@ -54,7 +56,7 @@ export function Footer() {
     { title: 'Legal', links: ['Privacy', 'Terms', 'Cookies'] },
   ]
   return (
-    <footer className="border-t border-border px-4 py-12">
+    <footer className="relative overflow-hidden border-t border-border px-4 pt-12 pb-0">
       <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <Logo />
@@ -81,10 +83,13 @@ export function Footer() {
           </div>
         ))}
       </div>
-      <div className="mx-auto mt-10 flex max-w-5xl flex-col items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
+      <div className="mx-auto mt-10 flex max-w-5xl flex-col items-center justify-between gap-3 border-t border-border pt-6 pb-6 text-xs text-muted-foreground sm:flex-row">
         <p>© {new Date().getFullYear()} StreakForge. All rights reserved.</p>
         <p>Built for developers who show up.</p>
       </div>
+
+      {/* End-of-Page Cinematic Brand Reveal Watermark */}
+      <BrandWatermarkReveal appName="STREAKFORGE" />
     </footer>
   )
 }

@@ -59,11 +59,11 @@ export function AICoachCard({
     >
       {/* Animated gradient border: a slowly rotating conic sweep behind a 1px inset. */}
       {reduceMotion ? (
-        <div className="absolute inset-0 rounded-3xl bg-[conic-gradient(from_0deg,oklch(0.76_0.15_290/60%),oklch(0.80_0.12_155/50%),transparent_55%,oklch(0.76_0.15_290/60%))]" />
+        <div className="absolute inset-0 rounded-3xl bg-[conic-gradient(from_0deg,rgba(35,66,42,0.6),rgba(69,105,75,0.5),transparent_55%,rgba(35,66,42,0.6))]" />
       ) : (
         <motion.div
           aria-hidden
-          className="absolute -inset-[60%] rounded-full bg-[conic-gradient(from_0deg,oklch(0.76_0.15_290/70%),oklch(0.80_0.12_155/60%),transparent_40%,oklch(0.76_0.15_290/70%))]"
+          className="absolute -inset-[60%] rounded-full bg-[conic-gradient(from_0deg,rgba(35,66,42,0.7),rgba(69,105,75,0.6),transparent_40%,rgba(35,66,42,0.7))]"
           animate={{ rotate: 360 }}
           transition={{ duration: 7, ease: 'linear', repeat: Infinity }}
         />
@@ -106,7 +106,7 @@ export function AICoachCard({
                     onClick={() => setIndex(i)}
                     className={`h-1.5 rounded-full transition-all ${
                       i === index
-                        ? 'w-5 bg-gradient-to-r from-ember to-violet'
+                        ? 'w-5 bg-gradient-to-r from-primary to-accent'
                         : 'w-1.5 bg-muted-foreground/30 hover:bg-muted-foreground/60'
                     }`}
                   />
@@ -127,7 +127,7 @@ function CoachOrb({ speaking }: { speaking: boolean }) {
       {/* ambient halo */}
       <motion.div
         aria-hidden
-        className="absolute -inset-1 rounded-full bg-[radial-gradient(circle,oklch(0.76_0.15_290/55%),transparent_70%)] blur-[6px]"
+        className="absolute -inset-1 rounded-full bg-[radial-gradient(circle,rgba(69,105,75,0.45),transparent_70%)] blur-[6px]"
         animate={
           speaking
             ? { scale: [1, 1.22, 1], opacity: [0.6, 0.95, 0.6] }
@@ -140,7 +140,7 @@ function CoachOrb({ speaking }: { speaking: boolean }) {
         }}
       />
       {/* orb body */}
-      <div className="relative h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-ember via-ember/90 to-violet ring-1 ring-white/20">
+      <div className="relative h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-[#1c3823] via-[#23422a] to-[#45694b] ring-1 ring-white/20">
         {/* inner light highlight */}
         <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_32%_28%,oklch(1_0_0/75%),transparent_46%)]" />
         {/* drifting inner core */}

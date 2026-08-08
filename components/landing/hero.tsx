@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Flame } from 'lucide-react'
 import { PhoneMock } from './phone-mock'
 
+import { LogoReveal } from '@/components/ui/logo-reveal'
+
 const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.09, delayChildren: 0.15 } },
@@ -31,6 +33,11 @@ export function Hero() {
           animate="show"
           className="text-center lg:text-left"
         >
+          {/* Featured Premium 3D Glass Logo Reveal */}
+          <motion.div variants={item} className="mb-6 flex flex-col items-center lg:items-start">
+            <LogoReveal size={140} showReplayButton />
+          </motion.div>
+
           <motion.a
             variants={item}
             href="#"

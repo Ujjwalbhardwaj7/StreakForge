@@ -39,10 +39,12 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: '#0b0b12',
+  colorScheme: 'light',
+  themeColor: '#f6f4ee',
   userScalable: false,
 }
+
+import { PageLoadLogoReveal } from '@/components/ui/logo-reveal'
 
 export default function RootLayout({
   children,
@@ -50,8 +52,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`dark bg-background ${display.variable} ${sans.variable}`}>
+    <html lang="en" className={`bg-background ${display.variable} ${sans.variable}`}>
       <body className="font-sans antialiased">
+        <PageLoadLogoReveal />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

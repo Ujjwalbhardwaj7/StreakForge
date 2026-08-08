@@ -155,7 +155,7 @@ export function SubmissionFlow() {
             <button
               disabled={!canAdvance}
               onClick={() => go(step + 1)}
-              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-ember to-violet px-5 py-3.5 text-sm font-bold text-primary-foreground transition-all active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 disabled:grayscale enabled:glow-ember"
+              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-accent px-5 py-3.5 text-sm font-bold text-primary-foreground transition-all active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 disabled:grayscale enabled:glow-ember"
             >
               Continue
               <ArrowRight className="h-4 w-4" />
@@ -163,7 +163,7 @@ export function SubmissionFlow() {
           ) : (
             <button
               onClick={() => setClaimed(true)}
-              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-ember to-violet px-5 py-3.5 text-sm font-bold text-primary-foreground glow-ember transition-transform active:scale-[0.98]"
+              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-accent px-5 py-3.5 text-sm font-bold text-primary-foreground glow-ember transition-transform active:scale-[0.98]"
             >
               <Zap className="h-4 w-4" fill="currentColor" />
               Claim {totalXp} XP
@@ -188,7 +188,7 @@ function Stepper({ current, total }: { current: number; total: number }) {
               <div
                 className={`flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold ring-1 transition-colors ${
                   done
-                    ? 'bg-gradient-to-br from-ember to-violet text-primary-foreground ring-transparent'
+                    ? 'bg-gradient-to-br from-primary to-accent text-primary-foreground ring-transparent'
                     : active
                       ? 'bg-ember/15 text-ember ring-ember/40'
                       : 'bg-card text-muted-foreground ring-border'
@@ -207,7 +207,7 @@ function Stepper({ current, total }: { current: number; total: number }) {
             {i < total - 1 && (
               <div className="mx-1 -mt-5 h-0.5 flex-1 overflow-hidden rounded-full bg-border">
                 <motion.div
-                  className="h-full rounded-full bg-gradient-to-r from-ember to-violet"
+                  className="h-full rounded-full bg-gradient-to-r from-primary to-accent"
                   initial={false}
                   animate={{ width: done ? '100%' : '0%' }}
                   transition={{ duration: 0.4, ease }}
@@ -289,7 +289,7 @@ function FormStep({
 function ClaimStep() {
   return (
     <div>
-      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-ember to-violet glow-ember">
+      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-accent glow-ember">
         <Zap className="h-7 w-7 text-primary-foreground" fill="currentColor" />
       </div>
       <h1 className="mt-5 font-display text-2xl font-bold tracking-tight text-balance text-foreground">
@@ -305,7 +305,7 @@ function ClaimStep() {
         <SummaryRow icon={Zap} label="Mission reward" value={`+${missionDetail.xpReward} XP`} />
       </div>
 
-      <div className="mt-4 flex items-center justify-between rounded-2xl border border-ember/30 bg-gradient-to-br from-ember/15 via-card to-violet/10 px-5 py-4 glow-ember">
+      <div className="mt-4 flex items-center justify-between rounded-2xl border border-ember/30 bg-gradient-to-br from-ember/15 via-card to-card px-5 py-4 glow-ember">
         <span className="text-sm font-semibold text-foreground">Total reward</span>
         <span className="font-display text-2xl font-extrabold text-gradient-ember">
           +{totalXp} XP

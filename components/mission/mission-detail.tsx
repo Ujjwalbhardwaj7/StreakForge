@@ -103,8 +103,8 @@ export function MissionDetail() {
             </div>
           </div>
 
-          <div className="relative flex flex-1 items-center gap-2.5 overflow-hidden rounded-2xl border border-ember/30 bg-gradient-to-br from-ember/20 via-card to-violet/10 px-4 py-3 glow-ember">
-            <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[radial-gradient(closest-side,oklch(0.76_0.15_290/35%),transparent)] blur-md" />
+          <div className="relative flex flex-1 items-center gap-2.5 overflow-hidden rounded-2xl border border-ember/30 bg-gradient-to-br from-ember/20 via-card to-card px-4 py-3 glow-ember">
+            <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[radial-gradient(closest-side,rgba(35,66,42,0.25),transparent)] blur-md" />
             <Zap className="h-5 w-5 text-ember" fill="currentColor" />
             <div className="relative">
               <div className="text-lg font-extrabold leading-none text-gradient-ember">
@@ -187,7 +187,7 @@ export function MissionDetail() {
             <div className="mb-2.5 flex items-center gap-3">
               <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-secondary">
                 <motion.div
-                  className="h-full rounded-full bg-gradient-to-r from-ember to-violet"
+                  className="h-full rounded-full bg-gradient-to-r from-primary to-accent"
                   initial={false}
                   animate={{ width: `${total ? (done / total) * 100 : 0}%` }}
                   transition={{ type: 'spring', stiffness: 200, damping: 26 }}
@@ -200,7 +200,7 @@ export function MissionDetail() {
           )}
           <button
             onClick={handlePrimary}
-            className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-ember to-violet px-5 py-3.5 text-sm font-bold text-primary-foreground glow-ember transition-transform active:scale-[0.98]"
+            className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-accent px-5 py-3.5 text-sm font-bold text-primary-foreground transition-transform active:scale-[0.98]"
           >
             <Zap className="h-4 w-4" fill="currentColor" />
             {!started ? 'Start Mission' : allDone ? 'Complete Mission' : 'Continue'}

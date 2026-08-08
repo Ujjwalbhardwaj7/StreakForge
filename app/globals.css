@@ -41,41 +41,47 @@
   --radius-3xl: calc(var(--radius) + 20px);
 }
 
+/* DEFAULT SAGE CREAM PALETTE (4-Color Palette) */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  --background: oklch(0.12 0.015 270);
-  --foreground: oklch(0.97 0.005 270);
+  /* C1: Light Cream Background */
+  --background: #f6f4ee;
+  --foreground: #1d291a;
 
-  --card: oklch(0.16 0.02 270);
-  --card-foreground: oklch(0.97 0.005 270);
+  /* C2: Soft Mint / Sage Cream Card */
+  --card: #e4ebd9;
+  --card-foreground: #1d291a;
 
-  --popover: oklch(0.16 0.02 270);
-  --popover-foreground: oklch(0.97 0.005 270);
+  --popover: #e4ebd9;
+  --popover-foreground: #1d291a;
 
-  --primary: oklch(0.76 0.15 290);
-  --primary-foreground: oklch(0.12 0.02 270);
+  /* C4: Forest Sage Primary */
+  --primary: #4a6845;
+  --primary-foreground: #f6f4ee;
 
-  --secondary: oklch(0.20 0.02 270);
-  --secondary-foreground: oklch(0.95 0.005 270);
+  /* C3: Muted Sage Secondary */
+  --secondary: #d4e0cb;
+  --secondary-foreground: #1d291a;
 
-  --muted: oklch(0.20 0.02 270);
-  --muted-foreground: oklch(0.68 0.02 270);
+  --muted: #d4e0cb;
+  --muted-foreground: #4a5d45;
 
-  --accent: oklch(0.80 0.12 155);
-  --accent-foreground: oklch(0.12 0.02 270);
+  --accent: #a3b997;
+  --accent-foreground: #1d291a;
 
-  --destructive: oklch(0.70 0.18 25);
+  --destructive: #4a6845;
 
-  --border: oklch(1 0 0 / 9%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.76 0.15 290);
+  --border: #a3b997;
+  --input: #a3b997;
+  --ring: #4a6845;
 
-  --ember: oklch(0.76 0.15 290);
-  --ember-foreground: oklch(0.12 0.02 270);
-  --violet: oklch(0.80 0.12 155);
-  --subtle-green: oklch(0.80 0.12 155);
-  --glass: oklch(0.16 0.02 270 / 65%);
+  /* Strictly mapped Sage & Cream Palette for all accents */
+  --ember: #4a6845; /* Dark Forest Sage */
+  --ember-foreground: #f6f4ee;
+  --violet: #5c7a57; /* Medium Forest Sage */
+  --subtle-green: #a3b997; /* Muted Sage */
+  --glass: rgba(228, 235, 217, 0.92);
 
   --radius: 1.25rem;
 }
@@ -84,6 +90,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     -webkit-font-smoothing: antialiased;
@@ -96,29 +103,53 @@
     backdrop-filter: blur(20px) saturate(160%);
     -webkit-backdrop-filter: blur(20px) saturate(160%);
   }
+
   .text-gradient-ember {
-    background: linear-gradient(
-      100deg,
-      oklch(0.98 0 0) 0%,
-      oklch(0.82 0.14 290) 45%,
-      oklch(0.82 0.12 155) 100%
-    );
+    background: linear-gradient(110deg, #1d291a 0%, #4a6845 50%, #5c7a57 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
+
   .bg-grid {
-    background-image: linear-gradient(
-        to right,
-        oklch(1 0 0 / 4%) 1px,
-        transparent 1px
-      ),
-      linear-gradient(to bottom, oklch(1 0 0 / 4%) 1px, transparent 1px);
+    background-image: linear-gradient(to right,
+        rgba(74, 104, 69, 0.08) 1px,
+        transparent 1px),
+      linear-gradient(to bottom, rgba(74, 104, 69, 0.08) 1px, transparent 1px);
     background-size: 44px 44px;
   }
+
   .glow-ember {
-    box-shadow: 0 0 0 1px oklch(0.76 0.15 290 / 30%),
-      0 8px 36px -6px oklch(0.76 0.15 290 / 45%);
+    box-shadow: 0 0 0 1px #a3b997, 0 8px 24px -6px rgba(74, 104, 69, 0.3);
+  }
+
+  .card-hover {
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-3px);
+    border-color: #a3b997;
+    box-shadow: 0 12px 32px -8px rgba(74, 104, 69, 0.22),
+      0 0 0 1px rgba(163, 185, 151, 0.4);
+  }
+
+  .card-hover-violet:hover {
+    transform: translateY(-3px);
+    border-color: #5c7a57;
+    box-shadow: 0 12px 32px -8px rgba(92, 122, 87, 0.22),
+      0 0 0 1px rgba(92, 122, 87, 0.4);
+  }
+
+  .glow-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .glow-hover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(74, 104, 69, 0.35);
   }
 }
 
@@ -129,13 +160,167 @@
 }
 
 @keyframes flamePulse {
+
   0%,
   100% {
     opacity: 0.55;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.9;
     transform: scale(1.08);
+  }
+}
+
+/* ----------------------------------------------------
+   PREMIUM 3D GLASS LOGO REVEAL ANIMATION (1.2s Sequence)
+   ---------------------------------------------------- */
+:root {
+  --logo-anim-duration: 1.2s;
+  --logo-glow-strength: 0.8;
+  --logo-scale-start: 0.95;
+  --logo-scale-mid: 0.98;
+  --logo-scale-end: 1;
+  --logo-easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* End-of-Page Brand Watermark Reveal Variables */
+  --watermark-name: "STREAKFORGE";
+  --watermark-size: 26vw;
+  --watermark-opacity: 0.12;
+  --watermark-duration: 800ms;
+  --watermark-easing: cubic-bezier(0.33, 1, 0.68, 1);
+  --watermark-bottom-offset: 16%;
+}
+
+.animate-logo-container {
+  animation: logoContainerScale var(--logo-anim-duration) var(--logo-easing) forwards;
+}
+
+.animate-logo-wireframe {
+  animation: logoWireframeReveal var(--logo-anim-duration) var(--logo-easing) forwards;
+  stroke-dasharray: 200;
+}
+
+.animate-logo-solid {
+  animation: logoSolidReveal var(--logo-anim-duration) var(--logo-easing) forwards;
+}
+
+.animate-logo-bloom {
+  animation: logoBloomPulse var(--logo-anim-duration) var(--logo-easing) forwards;
+}
+
+/* 0–300ms wireframe, 300–1000ms cross-fade fill, 1000–1200ms settle */
+@keyframes logoWireframeReveal {
+  0% {
+    opacity: 0;
+    transform: scale(var(--logo-scale-start));
+    filter: blur(4px);
+    stroke-dashoffset: 200;
+  }
+
+  25% {
+    opacity: 0.65;
+    transform: scale(var(--logo-scale-mid));
+    filter: blur(2px);
+    stroke-dashoffset: 60;
+  }
+
+  83.33% {
+    opacity: 0;
+    transform: scale(var(--logo-scale-end));
+    filter: blur(0px);
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(var(--logo-scale-end));
+    filter: blur(0px);
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes logoSolidReveal {
+  0% {
+    opacity: 0;
+    transform: scale(var(--logo-scale-start));
+    filter: blur(6px);
+  }
+
+  25% {
+    opacity: 0;
+    transform: scale(var(--logo-scale-mid));
+    filter: blur(4px);
+  }
+
+  83.33% {
+    opacity: 1;
+    transform: scale(var(--logo-scale-end));
+    filter: blur(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(var(--logo-scale-end));
+    filter: blur(0px);
+  }
+}
+
+@keyframes logoBloomPulse {
+
+  0%,
+  25% {
+    opacity: 0;
+    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+  }
+
+  83.33% {
+    opacity: 1;
+    filter: drop-shadow(0 0 16px rgba(255, 255, 255, var(--logo-glow-strength))) drop-shadow(0 0 32px rgba(92, 122, 87, 0.6));
+  }
+
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, calc(var(--logo-glow-strength) * 0.7))) drop-shadow(0 0 24px rgba(92, 122, 87, 0.4));
+  }
+}
+
+@keyframes logoContainerScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(0.97);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 20px 50px -10px rgba(29, 41, 26, 0.45),
+      0 0 0 1px rgba(255, 255, 255, 0.18) inset;
+  }
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-logo-container,
+  .animate-logo-wireframe,
+  .animate-logo-solid,
+  .animate-logo-bloom {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    filter: none !important;
+  }
+
+  .animate-logo-wireframe {
+    display: none !important;
   }
 }

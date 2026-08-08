@@ -108,7 +108,8 @@ export function Celebration({
       <Confetti />
 
       {/* Ambient ember glow behind the payoff */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-80 bg-[radial-gradient(60%_60%_at_50%_0%,oklch(0.76_0.15_290/20%),transparent)]" />
+      {/* Ambient ember glow behind the payoff */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-80 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(35,66,42,0.15),transparent)]" />
 
       {/* Headline */}
       <motion.div
@@ -121,7 +122,7 @@ export function Celebration({
           initial={{ scale: 0, rotate: -30 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ delay: 0.1, type: 'spring', stiffness: 200, damping: 12 }}
-          className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-ember to-violet glow-ember"
+          className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-accent glow-ember"
         >
           <Zap className="h-8 w-8 text-primary-foreground" fill="currentColor" />
         </motion.div>
@@ -138,9 +139,9 @@ export function Celebration({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.35, duration: 0.5, ease }}
-        className="relative mt-8 overflow-hidden rounded-3xl border border-ember/30 bg-gradient-to-br from-ember/15 via-card to-violet/10 p-6 text-center glow-ember"
+        className="relative mt-8 overflow-hidden rounded-3xl border border-ember/30 bg-gradient-to-br from-ember/15 via-card to-card p-6 text-center glow-ember"
       >
-        <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[radial-gradient(closest-side,oklch(0.76_0.15_290/30%),transparent)] blur-md" />
+        <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[radial-gradient(closest-side,rgba(35,66,42,0.25),transparent)] blur-md" />
         <div className="text-xs font-semibold uppercase tracking-wide text-ember">Total XP</div>
         <div className="mt-1 font-display text-5xl font-extrabold tracking-tight text-gradient-ember">
           <CountUp from={xpFrom} to={xpTo} delay={0.4} />
@@ -175,9 +176,9 @@ export function Celebration({
                   ? {
                       scale: [1, 1.35, 1],
                       textShadow: [
-                        '0 0 0px oklch(0.76 0.15 290 / 0)',
-                        '0 0 22px oklch(0.76 0.15 290 / 60%)',
-                        '0 0 10px oklch(0.76 0.15 290 / 30%)',
+                        '0 0 0px rgba(35, 66, 42, 0)',
+                        '0 0 22px rgba(35, 66, 42, 0.5)',
+                        '0 0 10px rgba(35, 66, 42, 0.25)',
                       ],
                     }
                   : {}
@@ -216,7 +217,7 @@ export function Celebration({
       >
         <Link
           href="/dashboard"
-          className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-ember to-violet px-5 py-3.5 text-sm font-bold text-primary-foreground glow-ember transition-transform active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-accent px-5 py-3.5 text-sm font-bold text-primary-foreground glow-ember transition-transform active:scale-[0.98]"
         >
           Back to Mission Control
           <ArrowRight className="h-4 w-4" />
@@ -266,7 +267,7 @@ export function Celebration({
               {/* Icon flies in + scales up with a spinning glow ring */}
               <div className="relative mx-auto mt-5 h-28 w-28">
                 <motion.div
-                  className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,oklch(0.76_0.15_290),oklch(0.80_0.12_155),oklch(0.85_0.12_90),oklch(0.76_0.15_290))] blur-md"
+                  className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,rgba(35,66,42,0.8),rgba(69,105,75,0.7),rgba(35,66,42,0.8))]"
                   animate={{ rotate: 360 }}
                   transition={{ repeat: Infinity, duration: 6, ease: 'linear' }}
                 />
@@ -289,7 +290,7 @@ export function Celebration({
 
               <button
                 onClick={() => setShowBadge(false)}
-                className="mt-6 w-full rounded-2xl bg-gradient-to-r from-ember to-violet px-5 py-3 text-sm font-bold text-primary-foreground transition-transform active:scale-[0.98]"
+                className="mt-6 w-full rounded-2xl bg-gradient-to-r from-primary to-accent px-5 py-3 text-sm font-bold text-primary-foreground transition-transform active:scale-[0.98]"
               >
                 Nice
               </button>
